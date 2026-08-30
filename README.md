@@ -22,7 +22,7 @@ El problema que se busca estudiar es que la magnitud y las consecuencias de las 
 
 ## Alcance
 
-El proyecto va a revisar las inundaciones que han ocurrido en Chile. Se va a mirar dónde pasaron, cómo han cambiado con el tiempo y cuánta gente afectaron.
+* El proyecto va a revisar las inundaciones que han ocurrido en Chile. Se va a mirar dónde pasaron, cómo han cambiado con el tiempo y cuánta gente afectaron.
 
 Vamos a ver datos como la fecha de cada inundación, dónde fue, cuántas personas resultaron afectadas, si hubo muertos o heridos, y los daños que se reportaron. Esto dependerá de la información que encontremos en los datos que tenemos.
 
@@ -30,6 +30,24 @@ Solo vamos a analizar los eventos que se clasifican como inundaciones y los que 
 
 ## Estructura de analísis (X, Y, T)
 
+* X – Datos disponibles
+
+  * Dónde ocurrió.
+  * Cuándo ocurrió (fecha y año).
+  * Qué tipo de inundación fue.
+  * Cualquier otro detalle del evento.
+
+* Y – Lo que nos interesa saber
+
+  * Qué tan grave fue la inundación.
+  * Cuántas personas se vieron afectadas.
+  * Cuántas personas murieron o resultaron heridas.
+  * Pérdidas económicas o cualquier otro impacto.
+
+* T – Periodo del estudio
+
+  * El lapso de tiempo que cubre la información sobre inundaciones que usamos en el proyecto.
+  * 
 ## Dataset y Narrativa Inicial
 
 ## Estructura del Repositorio
