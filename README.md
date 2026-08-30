@@ -1,4 +1,4 @@
-# [Impacto de las inundaciones en Chile]
+# Análisis Espacial y Temporal de la Calidad del Aire en el Gran Santiago (2013–2023)
 
 ## Integrantes
 * Alex Cordero
@@ -6,48 +6,28 @@
 * Jose Saavedra
 * Luis Sarsuri
 
-## Descripción breve
+## 1. Contexto y Motivación
+La contaminación atmosférica por material particulado ($MP_{10}$ y $MP_{2.5}$) en la cuenca de Santiago constituye uno de los problemas ambientales más críticos de Chile debido a su impacto en la salud respiratoria. Este proyecto analiza la evolución temporal, la estacionalidad climática y las disparidades espaciales de la calidad del aire en cinco sectores estratégicos de la capital durante la última década.
 
-* Chile enfrenta periódicamente eventos de lluvias intensas que pueden provocar inundaciones y desbordes de ríos. Estos eventos generan distintos problemas para la población y las ciudades, como daños en viviendas e infraestructura, interrupciones de caminos y aislamiento de sectores.
+## 2. Pregunta de Investigación
+¿Cómo varían las concentraciones de material particulado fino ($MP_{2.5}$ y $MP_{10}$) entre los distintos sectores geográficos del Gran Santiago y las estaciones del año durante el período 2013–2023?
 
-El problema que se busca estudiar es que la magnitud y las consecuencias de las inundaciones no son iguales en todas las regiones ni en todos los periodos, por lo que resulta útil analizar los datos disponibles para identificar las zonas y momentos que presentan una mayor afectación.
+## 3. Delimitación del Alcance (X, Y, T)
+- **Unidad de observación:** Medición diaria por estación de monitoreo.
+- **Variables disponibles (X):** Estación de monitoreo (`Pudahuel`, `El Bosque`, `Santiago`, `La Florida`, `Las Condes`), mes, estación climática, `Temperatura`, `Humedad`, `Viento_v`.
+- **Variable objetivo (Y):** Concentraciones de `MP2_5` y `MP10` ($\mu g/m^3$) y categorización según límites normativos.
+- **Contexto temporal (T):** Período 2013 - 2023.
+- **Límites:** Análisis analítico-visual retrospectivo basado en mediciones terrestres; no incluye modelos de dinámica de fluidos en tiempo real.
 
-## Motivación
+## 4. Dataset
+- **Fuente:** Red de Monitoreo del Sistema de Información Nacional de Calidad del Aire (SINCA) / Ministerio del Medio Ambiente (MMA).
+- **Dimensiones:** 47.953 observaciones, 12 columnas.
+- **Variables principales:** `Estacion`, `FECHA (YYMMDD)`, `MP10`, `MP2_5`, `CO`, `NO`, `NO2`, `O3`, `Humedad`, `Temperatura`, `Viento_v`.
 
-* La motivación nace debido a que Chile no posee una cultura de meteorología bien definida como lo es en cuanto a la experiencia sismica que tiene el pais, es por ello que esta investigación se busca aportar y saber el porque de la inundaciones en determinados sectores para asi no solo considerar el material o estructura de que estan hechos una vivienda, si no tambien el lugar donde se construyen.
-
-## Pregunta Principal
-
-¿Cómo han variado las inundaciones en Chile según su ubicación geográfica, cambio climático y nivel de afectación durante los últimos años?.
-
-## Alcance
-
-* El proyecto va a revisar las inundaciones que han ocurrido en Chile. Se va a mirar dónde pasaron, cómo han cambiado con el tiempo y cuánta gente afectaron.
-
-Vamos a ver datos como la fecha de cada inundación, dónde fue, cuántas personas resultaron afectadas, si hubo muertos o heridos, y los daños que se reportaron. Esto dependerá de la información que encontremos en los datos que tenemos.
-
-Solo vamos a analizar los eventos que se clasifican como inundaciones y los que están dentro del rango de fechas que cubre la base de datos que usamos.
-
-## Estructura de analísis (X, Y, T)
-
-* X – Datos disponibles
-
-  * Dónde ocurrió.
-  * Cuándo ocurrió (fecha y año).
-  * Qué tipo de inundación fue.
-  * Cualquier otro detalle del evento.
-
-* Y – Lo que nos interesa saber
-
-  * Qué tan grave fue la inundación.
-  * Cuántas personas se vieron afectadas.
-  * Cuántas personas murieron o resultaron heridas.
-  * Pérdidas económicas o cualquier otro impacto.
-
-* T – Periodo del estudio
-
-  * El lapso de tiempo que cubre la información sobre inundaciones que usamos en el proyecto.
-  * 
-## Dataset y Narrativa Inicial
-
-## Estructura del Repositorio
+## 5. Estructura del Repositorio
+- `data/raw/`: Datos originales (`Calidad del aire.csv`).
+- `data/processed/`: Tablas limpias y filtradas temporalmente.
+- `notebooks/`: Notebooks de análisis exploratorio (`01_exploracion.ipynb`).
+- `figures/`: Gráficos y prototipos visuales exportados.
+- `src/`: Funciones auxiliares de carga y procesamiento.
+- `app/`: Aplicación interactiva final (Plotly / Streamlit).
