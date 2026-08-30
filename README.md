@@ -22,6 +22,12 @@ El problema que se busca estudiar es que la magnitud y las consecuencias de las 
 
 ## Alcance
 
+El proyecto va a revisar las inundaciones que han ocurrido en Chile. Se va a mirar dónde pasaron, cómo han cambiado con el tiempo y cuánta gente afectaron.
+
+Vamos a ver datos como la fecha de cada inundación, dónde fue, cuántas personas resultaron afectadas, si hubo muertos o heridos, y los daños que se reportaron. Esto dependerá de la información que encontremos en los datos que tenemos.
+
+Solo vamos a analizar los eventos que se clasifican como inundaciones y los que están dentro del rango de fechas que cubre la base de datos que usamos.
+
 ## Estructura de analísis (X, Y, T)
 
 ## Dataset y Narrativa Inicial
