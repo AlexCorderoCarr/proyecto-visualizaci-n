@@ -65,3 +65,7 @@ proyecto-calidad-aire-santiago/
 ├── app/                     # Código del producto interactivo final (Streamlit / Plotly)
 ├── .gitignore               # Exclusión de temporales y cachés
 └── README.md                # Documentación del proyecto
+
+## Extra
+
+Presentación avance 1: https://www.canva.com/design/DAHTz6UvOvI/Q2iQliTL9TbzZVJTXBcqXg/edit
