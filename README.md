@@ -51,21 +51,35 @@ En la inspección inicial se identificaron valores nulos en sensores meteorológ
 
 ---
 
+# Análisis Espacial y Estacional de la Calidad del Aire en el Gran Santiago (2013-2023)
+
+Este proyecto desarrolla una aplicación interactiva para explorar la dinámica espacial y temporal del material particulado ($MP_{2.5}$ y $MP_{10}$) en la cuenca de Santiago, evidenciando fenómenos físicos como la inversión térmica y la segregación territorial de contaminantes.
+
+## Problema y Pregunta de Investigación
+¿Cómo varían las concentraciones de material particulado fino entre los distintos sectores geográficos del Gran Santiago y las estaciones del año durante el período 2013–2023?
+
+El alcance espacial considera 5 estaciones (Pudahuel, Santiago Centro, Las Condes, El Bosque y La Florida).
+
+## Origen de los Datos
+Los datos provienen de la **Red SINCA del Ministerio del Medio Ambiente**.
+- **Registros:** 19.271 diarios continuos (2013-2023).
+- **Tratamiento:** Se ha implementado un pipeline de preprocesamiento (`src/data_cleaning.py`) para sanear inconsistencias de sensores meteorológicos (escalas alteradas de temperatura y direcciones azimutales en velocidad de viento), detectadas en el Avance 1.
+
 ## 5. Estructura del Repositorio
-
 ```text
-proyecto-calidad-aire-santiago/
+proyecto-visualizacion/
 ├── data/
-│   ├── raw/                 # Datos originales sin procesar (Calidad del aire.csv)
-│   └── processed/           # Datos filtrados y transformados para análisis
+│   ├── raw/Calidad del aire.csv            # Dataset original (Ignorado en git)
+│   └── processed/calidad_aire_limpia.parquet # Datos procesados para la App
 ├── notebooks/
-│   └── 01_exploracion.ipynb # Notebook de carga inicial, formateo y validación preliminar
-├── figures/                 # Gráficos generados para informes y presentaciones
-├── src/                     # Funciones y scripts auxiliares reutilizables
-├── app/                     # Código del producto interactivo final (Streamlit / Plotly)
-├── .gitignore               # Exclusión de temporales y cachés
-└── README.md                # Documentación del proyecto
-
-## Extra
-
-Presentación avance 1: https://www.canva.com/design/DAHTz6UvOvI/Q2iQliTL9TbzZVJTXBcqXg/edit
+│   └── 01_exploracion.ipynb                # EDA y pruebas iniciales
+├── src/
+│   └── data_cleaning.py                    # Script de saneamiento de datos
+├── app/
+│   ├── app.py                              # Entrypoint de Streamlit
+│   └── pages/
+│       ├── 1_Contexto_y_Calidad.py         # Análisis de estructura de datos
+│       ├── 2_Analisis_Univariado.py        # Distribuciones y sesgos
+│       └── 3_Analisis_Multivariable.py     # Territorio, Estacionalidad e Inversión Térmica
+├── requirements.txt                        # Dependencias del proyecto
+└── README.md
