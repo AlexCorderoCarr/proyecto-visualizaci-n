@@ -1,0 +1,144 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "p2v08a1b2c3d4e5f6071",
+  "position": {
+    "x": 1118,
+    "y": 606,
+    "z": 8000,
+    "height": 442,
+    "width": 770,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Datos"
+                    }
+                  },
+                  "Property": "Estacion"
+                }
+              },
+              "queryRef": "Datos.Estacion",
+              "nativeQueryRef": "Estacion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Datos"
+                    }
+                  },
+                  "Property": "Zona"
+                }
+              },
+              "queryRef": "Datos.Zona",
+              "nativeQueryRef": "Zona"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Datos"
+                    }
+                  },
+                  "Property": "Tiene_Clima"
+                }
+              },
+              "queryRef": "Datos.Tiene_Clima",
+              "nativeQueryRef": "Tiene_Clima"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Datos"
+                    }
+                  },
+                  "Property": "Mediana MP2.5"
+                }
+              },
+              "queryRef": "Datos.Mediana MP2.5",
+              "nativeQueryRef": "Mediana MP2.5"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Datos"
+                    }
+                  },
+                  "Property": "Dias Sobre Norma"
+                }
+              },
+              "queryRef": "Datos.Dias Sobre Norma",
+              "nativeQueryRef": "Dias Sobre Norma"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Datos"
+                    }
+                  },
+                  "Property": "% Dias Sobre Norma"
+                }
+              },
+              "queryRef": "Datos.% Dias Sobre Norma",
+              "nativeQueryRef": "% Dias Sobre Norma"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Datos"
+                    }
+                  },
+                  "Property": "Dias Alerta"
+                }
+              },
+              "queryRef": "Datos.Dias Alerta",
+              "nativeQueryRef": "Dias Alerta"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Resumen Territorial por Estación (2018–2023)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

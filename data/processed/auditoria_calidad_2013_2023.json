@@ -1,0 +1,154 @@
+{
+  "filas_2013_2023": 19271,
+  "filas_2018_2023": 10141,
+  "fecha_min_2018_2023": "2018-01-01",
+  "fecha_max_2018_2023": "2023-07-27",
+  "resumen_anual_2013_2023": [
+    {
+      "year": 2013,
+      "registros": 1825,
+      "mp25_validos": 1477,
+      "mp25_mediana": 179.58,
+      "mp25_promedio": 206.88,
+      "mp25_max": 995.83,
+      "es_rango_homogeneo": false
+    },
+    {
+      "year": 2014,
+      "registros": 1825,
+      "mp25_validos": 1784,
+      "mp25_mediana": 177.08,
+      "mp25_promedio": 240.51,
+      "mp25_max": 995.83,
+      "es_rango_homogeneo": false
+    },
+    {
+      "year": 2015,
+      "registros": 1825,
+      "mp25_validos": 1790,
+      "mp25_mediana": 199.58,
+      "mp25_promedio": 266.18,
+      "mp25_max": 998.33,
+      "es_rango_homogeneo": false
+    },
+    {
+      "year": 2016,
+      "registros": 1830,
+      "mp25_validos": 1732,
+      "mp25_mediana": 205.83,
+      "mp25_promedio": 257.74,
+      "mp25_max": 987.5,
+      "es_rango_homogeneo": false
+    },
+    {
+      "year": 2017,
+      "registros": 1825,
+      "mp25_validos": 1580,
+      "mp25_mediana": 27.0,
+      "mp25_promedio": 74.87,
+      "mp25_max": 995.83,
+      "es_rango_homogeneo": false
+    },
+    {
+      "year": 2018,
+      "registros": 1825,
+      "mp25_validos": 1726,
+      "mp25_mediana": 20.0,
+      "mp25_promedio": 26.18,
+      "mp25_max": 134.0,
+      "es_rango_homogeneo": true
+    },
+    {
+      "year": 2019,
+      "registros": 1825,
+      "mp25_validos": 1756,
+      "mp25_mediana": 21.0,
+      "mp25_promedio": 25.24,
+      "mp25_max": 105.0,
+      "es_rango_homogeneo": true
+    },
+    {
+      "year": 2020,
+      "registros": 1830,
+      "mp25_validos": 1782,
+      "mp25_mediana": 18.0,
+      "mp25_promedio": 21.74,
+      "mp25_max": 145.0,
+      "es_rango_homogeneo": true
+    },
+    {
+      "year": 2021,
+      "registros": 1825,
+      "mp25_validos": 1777,
+      "mp25_mediana": 17.0,
+      "mp25_promedio": 24.4,
+      "mp25_max": 127.0,
+      "es_rango_homogeneo": true
+    },
+    {
+      "year": 2022,
+      "registros": 1825,
+      "mp25_validos": 1771,
+      "mp25_mediana": 17.0,
+      "mp25_promedio": 24.35,
+      "mp25_max": 106.0,
+      "es_rango_homogeneo": true
+    },
+    {
+      "year": 2023,
+      "registros": 1011,
+      "mp25_validos": 963,
+      "mp25_mediana": 20.0,
+      "mp25_promedio": 27.1,
+      "mp25_max": 120.0,
+      "es_rango_homogeneo": true
+    }
+  ],
+  "validos_por_estacion_2018_2023": [
+    {
+      "Estacion": "El Bosque",
+      "Registros": 2034,
+      "MP2_5": 1966,
+      "MP10": 2001,
+      "Temperatura_C": 0,
+      "Humedad": 0,
+      "Viento_ms": 0
+    },
+    {
+      "Estacion": "La Florida",
+      "Registros": 2030,
+      "MP2_5": 1918,
+      "MP10": 1969,
+      "Temperatura_C": 0,
+      "Humedad": 0,
+      "Viento_ms": 0
+    },
+    {
+      "Estacion": "Las Condes",
+      "Registros": 2026,
+      "MP2_5": 1947,
+      "MP10": 1960,
+      "Temperatura_C": 1952,
+      "Humedad": 1972,
+      "Viento_ms": 1727
+    },
+    {
+      "Estacion": "Pudahuel",
+      "Registros": 2025,
+      "MP2_5": 1975,
+      "MP10": 2006,
+      "Temperatura_C": 1962,
+      "Humedad": 1998,
+      "Viento_ms": 1960
+    },
+    {
+      "Estacion": "Santiago",
+      "Registros": 2026,
+      "MP2_5": 1969,
+      "MP10": 2002,
+      "Temperatura_C": 2002,
+      "Humedad": 1999,
+      "Viento_ms": 1998
+    }
+  ]
+}

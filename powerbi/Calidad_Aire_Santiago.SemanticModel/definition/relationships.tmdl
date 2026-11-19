@@ -1,0 +1,10 @@
+relationship 2387425e-253c-472e-8a82-d411fd117a99
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Datos.Anio_Mes
+	toColumn: LocalDateTable_d3af6f37-03e8-4138-81bc-8c5cb99fb922.Date
+
+relationship fa42dddf-1f67-4f21-9ac4-d54edfe1f1e1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Datos.Fecha
+	toColumn: LocalDateTable_95682769-b708-473e-9b20-1cbcc6c54e94.Date
+

@@ -1,0 +1,243 @@
+table Datos
+	lineageTag: d06b9f74-274a-4af2-a799-05574b982f6c
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 26c489cd-abda-4b87-9ce1-ec5985f572bd
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		variation Variation
+			isDefault
+			relationship: fa42dddf-1f67-4f21-9ac4-d54edfe1f1e1
+			defaultHierarchy: LocalDateTable_95682769-b708-473e-9b20-1cbcc6c54e94.'Jerarquía de fechas'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 0615b657-f3ad-4305-9259-fe45f1e1929b
+		summarizeBy: none
+		sourceColumn: Anio
+
+		annotation SummarizationSetBy = User
+
+	column Mes
+		dataType: string
+		lineageTag: b5ad6268-ce24-4ad1-8a6d-a086b20b4001
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anio_Mes
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c967b201-8cc6-4ad4-91a6-189b68412ca0
+		summarizeBy: none
+		sourceColumn: Anio_Mes
+
+		variation Variation
+			isDefault
+			relationship: 2387425e-253c-472e-8a82-d411fd117a99
+			defaultHierarchy: LocalDateTable_d3af6f37-03e8-4138-81bc-8c5cb99fb922.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Estacion_Anio
+		dataType: string
+		lineageTag: f06c8785-de96-4daf-b646-b8662d922fc2
+		summarizeBy: none
+		sourceColumn: Estacion_Anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estacion
+		dataType: string
+		lineageTag: 656eacd4-e00e-4e67-8a5a-a1c8dccb0aa8
+		summarizeBy: none
+		sourceColumn: Estacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Zona
+		dataType: string
+		lineageTag: 3dc311c2-6978-4afb-98c2-f0b3f6ccef40
+		summarizeBy: none
+		sourceColumn: Zona
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tiene_Clima
+		dataType: string
+		lineageTag: 5942e93b-030f-4218-a023-4914a9504c82
+		summarizeBy: none
+		sourceColumn: Tiene_Clima
+
+		annotation SummarizationSetBy = Automatic
+
+	column MP2_5
+		dataType: int64
+		formatString: 0
+		lineageTag: 58e8f67a-87c6-4d68-aa90-13ffea8913ba
+		summarizeBy: sum
+		sourceColumn: MP2_5
+
+		annotation SummarizationSetBy = Automatic
+
+	column MP10
+		dataType: int64
+		formatString: 0
+		lineageTag: d37b0a5d-019d-4a08-9404-fa688c796404
+		summarizeBy: sum
+		sourceColumn: MP10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Temperatura_C
+		dataType: double
+		lineageTag: d059e399-97a3-4600-b991-353261b450ec
+		summarizeBy: sum
+		sourceColumn: Temperatura_C
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Humedad_pct
+		dataType: double
+		lineageTag: 07b827f9-5725-46e2-bc3f-b4d11068b6f7
+		summarizeBy: sum
+		sourceColumn: Humedad_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Viento_ms
+		dataType: double
+		lineageTag: e5a482d4-87f9-48cf-a08a-4ce75596d061
+		summarizeBy: sum
+		sourceColumn: Viento_ms
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dia_Sobre_Norma
+		dataType: int64
+		formatString: 0
+		lineageTag: ae62581f-1a66-46ad-9800-04022e683aa7
+		summarizeBy: sum
+		sourceColumn: Dia_Sobre_Norma
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia_Alerta
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a0dce93-1ea3-4599-90ea-a090be428b02
+		summarizeBy: sum
+		sourceColumn: Dia_Alerta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria_Calidad
+		dataType: string
+		lineageTag: 3d153500-e9d8-4288-be24-a3f4d4a09e2d
+		summarizeBy: none
+		sourceColumn: Categoria_Calidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitud
+		dataType: double
+		lineageTag: abac6d39-f9d8-4c2e-8187-9178439bf962
+		dataCategory: Latitude
+		summarizeBy: sum
+		sourceColumn: Latitud
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitud
+		dataType: double
+		lineageTag: 4f624524-ec21-4340-93a1-73d26dff2d6a
+		dataCategory: Longitude
+		summarizeBy: sum
+		sourceColumn: Longitud
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Mediana MP2.5' = MEDIAN(Datos[MP2_5])
+		formatString: 0.0
+		lineageTag: 10000001-0000-4000-8000-000000000001
+
+	measure 'Promedio MP2.5' = AVERAGE(Datos[MP2_5])
+		formatString: 0.0
+		lineageTag: 10000001-0000-4000-8000-000000000002
+
+	measure 'Norma Diaria (50)' = 50
+		formatString: 0
+		lineageTag: 10000001-0000-4000-8000-000000000003
+
+	measure 'Total Dias Medidos' = COUNT(Datos[MP2_5])
+		formatString: #,0
+		lineageTag: 10000001-0000-4000-8000-000000000004
+
+	measure 'Dias Sobre Norma' = COALESCE(SUM(Datos[Dia_Sobre_Norma]), 0)
+		formatString: #,0
+		lineageTag: 10000001-0000-4000-8000-000000000005
+
+	measure '% Dias Sobre Norma' = DIVIDE([Dias Sobre Norma], [Total Dias Medidos], 0)
+		formatString: 0.0%
+		lineageTag: 10000001-0000-4000-8000-000000000006
+
+	measure 'Dias Alerta' = COALESCE(SUM(Datos[Dia_Alerta]), 0)
+		formatString: #,0
+		lineageTag: 10000001-0000-4000-8000-000000000007
+
+	measure 'Mediana Temperatura' = MEDIAN(Datos[Temperatura_C])
+		formatString: 0.0
+		lineageTag: 10000001-0000-4000-8000-000000000008
+
+	measure 'Promedio Temperatura' = AVERAGE(Datos[Temperatura_C])
+		formatString: 0.0
+		lineageTag: 10000001-0000-4000-8000-000000000009
+
+	measure 'Mediana Viento' = MEDIAN(Datos[Viento_ms])
+		formatString: 0.00
+		lineageTag: 10000001-0000-4000-8000-000000000010
+
+	measure 'Promedio Viento' = AVERAGE(Datos[Viento_ms])
+		formatString: 0.00
+		lineageTag: 10000001-0000-4000-8000-000000000011
+
+	measure 'Mediana Humedad' = MEDIAN(Datos[Humedad_pct])
+		formatString: 0.0
+		lineageTag: 10000001-0000-4000-8000-000000000012
+
+	partition Datos = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\mafer\Documents\GitHub\Visualizacion\proyecto-visualizacion\powerbi\calidad_aire_santiago_pbi.xlsx"), null, true),
+				    Datos_Sheet = Origen{[Item="Datos",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Datos_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Fecha", Int64.Type}, {"Anio", Int64.Type}, {"Mes", type text}, {"Anio_Mes", type date}, {"Estacion_Anio", type text}, {"Estacion", type text}, {"Zona", type text}, {"Tiene_Clima", type text}, {"MP2_5", Int64.Type}, {"MP10", Int64.Type}, {"Temperatura_C", type number}, {"Humedad_pct", type number}, {"Viento_ms", type number}, {"Dia_Sobre_Norma", Int64.Type}, {"Dia_Alerta", Int64.Type}, {"Categoria_Calidad", type text}, {"Latitud", type number}, {"Longitud", type number}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

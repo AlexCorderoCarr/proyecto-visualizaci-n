@@ -1,0 +1,22 @@
+model Model
+	culture: es-CL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-MX
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Datos"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Datos
+ref table DateTableTemplate_5e273fba-3ff2-4d84-8b40-1e88643b7f68
+ref table LocalDateTable_d3af6f37-03e8-4138-81bc-8c5cb99fb922
+ref table LocalDateTable_95682769-b708-473e-9b20-1cbcc6c54e94
+
+ref cultureInfo es-CL
+

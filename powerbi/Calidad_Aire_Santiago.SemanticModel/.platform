@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Calidad_Aire_Santiago"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f1e75e2e-6ffe-4d8f-a2af-b0486b76ad9c"
+  }
+}

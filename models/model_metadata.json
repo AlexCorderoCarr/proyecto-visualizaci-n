@@ -1,0 +1,193 @@
+{
+  "problema": "Regresión",
+  "target": "MP2_5",
+  "unidad": "µg/m³",
+  "features": [
+    "Estacion",
+    "Month",
+    "Temperatura_C",
+    "Humedad",
+    "Viento_ms"
+  ],
+  "estaciones_disponibles": [
+    "Las Condes",
+    "Pudahuel",
+    "Santiago"
+  ],
+  "estaciones_excluidas": [
+    "El Bosque",
+    "La Florida"
+  ],
+  "split": {
+    "tipo": "División temporal estricta",
+    "train_years": "2018-2021",
+    "test_years": "2022-2023",
+    "n_total": 5505,
+    "n_train": 3870,
+    "n_test": 1635,
+    "train_fecha_min": "2018-01-01",
+    "train_fecha_max": "2021-12-31",
+    "test_fecha_min": "2022-01-01",
+    "test_fecha_max": "2023-07-19",
+    "estaciones_test_counts": {
+      "Santiago": 551,
+      "Pudahuel": 549,
+      "Las Condes": 535
+    }
+  },
+  "hiperparametros_rf": {
+    "n_estimators": 200,
+    "max_depth": 10,
+    "min_samples_leaf": 4,
+    "random_state": 42
+  },
+  "y_train_mean": 23.37,
+  "reg_1var_feature": "Temperatura_C",
+  "reg_1var_coef": -1.5418,
+  "reg_1var_intercept": 41.6495,
+  "metricas_comparacion": [
+    {
+      "Modelo": "Base 1: Media de entrenamiento",
+      "Tipo": "Referencia constante",
+      "Variables": "Ninguna (promedio Y train)",
+      "MAE": 13.175,
+      "RMSE": 16.98,
+      "MAPE": 76.18,
+      "R2": -0.0001
+    },
+    {
+      "Modelo": "Base 2: Regresión Lineal (1 variable)",
+      "Tipo": "Referencia simple",
+      "Variables": "Temperatura_C",
+      "MAE": 10.885,
+      "RMSE": 15.364,
+      "MAPE": 63.59,
+      "R2": 0.1812
+    },
+    {
+      "Modelo": "Regresión Lineal Múltiple",
+      "Tipo": "Modelo lineal completo",
+      "Variables": "5 variables (Estación + Mes + Clima)",
+      "MAE": 10.487,
+      "RMSE": 14.291,
+      "MAPE": 63.41,
+      "R2": 0.2916
+    },
+    {
+      "Modelo": "Random Forest Regressor (Final)",
+      "Tipo": "Ensamble no lineal (Final)",
+      "Variables": "5 variables (Estación + Mes + Clima)",
+      "MAE": 8.093,
+      "RMSE": 12.053,
+      "MAPE": 43.37,
+      "R2": 0.4961
+    }
+  ],
+  "mejoras": {
+    "vs_media": {
+      "reduccion_mae_pct": 38.57,
+      "reduccion_rmse_pct": 29.02,
+      "reduccion_mape_pct": 43.07,
+      "ganancia_r2": 0.4962
+    },
+    "vs_reg_1var": {
+      "reduccion_mae_pct": 25.65,
+      "reduccion_rmse_pct": 21.55,
+      "reduccion_mape_pct": 31.8,
+      "ganancia_r2": 0.3149
+    },
+    "vs_reg_multiple": {
+      "reduccion_mae_pct": 22.83,
+      "reduccion_rmse_pct": 15.66,
+      "reduccion_mape_pct": 31.6,
+      "ganancia_r2": 0.2045
+    }
+  },
+  "importancia_variables_pct": {
+    "Temperatura_C": 34.11,
+    "Month": 29.27,
+    "Estacion": 14.97,
+    "Viento_ms": 13.37,
+    "Humedad": 8.28
+  },
+  "correlaciones_train_mp25": {
+    "Month": -0.059,
+    "Temperatura_C": -0.428,
+    "Humedad": 0.314,
+    "Viento_ms": -0.246
+  },
+  "rangos_variables": {
+    "Month": {
+      "min": 1.0,
+      "p05": 1.0,
+      "median": 6.0,
+      "p95": 12.0,
+      "max": 12.0
+    },
+    "Temperatura_C": {
+      "min": 0.31,
+      "p05": 4.54,
+      "median": 11.74,
+      "p95": 18.92,
+      "max": 26.75
+    },
+    "Humedad": {
+      "min": 10.0,
+      "p05": 43.35,
+      "median": 72.93,
+      "p95": 94.58,
+      "max": 100.0
+    },
+    "Viento_ms": {
+      "min": 0.0,
+      "p05": 0.04,
+      "median": 0.44,
+      "p95": 1.54,
+      "max": 3.95
+    }
+  },
+  "medianas_historicas_estacion_mes": {
+    "Las Condes": {
+      "1": 14.0,
+      "2": 16.0,
+      "3": 15.0,
+      "4": 20.0,
+      "5": 24.0,
+      "6": 21.0,
+      "7": 22.0,
+      "8": 24.0,
+      "9": 16.0,
+      "10": 12.0,
+      "11": 13.0,
+      "12": 13.0
+    },
+    "Pudahuel": {
+      "1": 12.0,
+      "2": 15.0,
+      "3": 14.0,
+      "4": 23.0,
+      "5": 42.0,
+      "6": 48.0,
+      "7": 50.0,
+      "8": 35.0,
+      "9": 20.0,
+      "10": 13.0,
+      "11": 12.0,
+      "12": 12.0
+    },
+    "Santiago": {
+      "1": 14.0,
+      "2": 16.0,
+      "3": 16.0,
+      "4": 23.0,
+      "5": 34.5,
+      "6": 39.0,
+      "7": 43.0,
+      "8": 33.0,
+      "9": 20.0,
+      "10": 14.0,
+      "11": 13.0,
+      "12": 13.0
+    }
+  }
+}
